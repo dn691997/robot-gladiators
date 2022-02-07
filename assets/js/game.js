@@ -59,58 +59,8 @@ else if(pFight==="skip" || pFight==="SKIP" || pFight==="Skip") {
 }   else {
     window.alert("You need to choose a valid option. Try again!");
     }
+//note that the } tag below is to close out the var fight=function (){ up top.
 };
+
 // run fight function to start game
 fight();
-
-
-// Setting up key word var with name "fight" and equal or execute code of Function
-
-// var fight=function() {
-//     window.alert("Welcome to Robot Gladiators, " + pName + "!");
-// };
-
-// fight();
-
-// //We need to subtract pAttack with eHealth to update eHealth. Log result in console. Subtract value of eAttack to pHealth and update pHealth. Log result in console.
-// // Player attack Enemy
-// eHealth = eHealth - pAttack;
-
-// console.log(pName+" attacked "+eName+". "+eName+" now has "+eHealth+" health remaining.");
-
-// // Enemy attack player
-
-// pHealth=pHealth-eAttack;
-
-// console.log(eName+" attacked "+pName+". "+pName+" now has "+pHealth+" health remaining.");
-
-// // 3 equal sign (===)is use to heck if two values are directly equal to each other.
-
-// //Check to see if player health is still greater than 0
-// if(pHealth>0) {
-//     console.log("Your player is still alive!");
-// }
-// if(pHealth===0) {
-//     console.log("This will not run.");
-// }
-// else{
-//     console.log("This will run instead.");
-// };
-
-// //Check to see if enemy health is still greate or equal to 0 and alert window
-// if(eHealth<=0) {
-//     window.alert(eName+" has died!");
-// }
-// else{
-//     window.alert(eName+" has "+eHealth+" remaining!");
-// }
-
-// //Check to see if player robot is dead or alive
-
-// if(pHealth<=0) {
-//     window.alert(pName + " has died!");
-// }
-// else {
-//     window.alert(pName+" still has "+pHealth+" health remaining.");
-// }
-
