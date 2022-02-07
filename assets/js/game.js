@@ -12,11 +12,12 @@ var eAttack=12;
 
 // You can also log multiple values at once like this
 console.log(pName,pHealth,pAttack,pMoney);
-console.log(eName,eHealth,eAttack)
+console.log(eName,eHealth,eAttack);
 
 
 //Alert message to welcome player
-Welcome=window.alert("Welcome to Robot Gladiators, " + pName + "!");
+var fight=function(){window.alert("Welcome to Robot Gladiators, " + pName + "!");
+
 
 //Alert player of current stat of player and enemy
 
@@ -24,7 +25,7 @@ window.alert(pName+" currently have "+pHealth+" health, " +pAttack+" attack, "+p
 
 //Prompt will pop up asking player if the want to fight or skip. pfight=promptFight (just a name, it can be name anything)
 
-var pFight=window.prompt("Would you like to fight or skip this battle?")
+var pFight=window.prompt("Would you like to fight or skip this battle?");
 
 //If they pick fight. Compute result for the fight. Show result using prompt after fight to show Player remaining health and Enemy health are attacking.
 
@@ -42,17 +43,26 @@ if(eHealth<=0){
 
 //If player choose/input "skip" OR "SKIP" OR "Skip" then:
 else if(pFight==="skip" || pFight==="SKIP" || pFight==="Skip") {
+    //confirm player decision
     var confirmSkip=window.confirm("Are you sure you'd like to skip?");
-if (confirmSkip){
+    //if yes (true), then leave fight
+    if (confirmSkip){
     window.alert(pName + " has decided to skip this fight. Goodbye!");
+    //subtract money for skipping
     pMoney=pMoney-2;
     window.alert(pName+" lost 2 Money as penalty for skipping. "+ pName+" remaining gold is "+pMoney+".");
 }
-} else {
-    window.alert("You need to choose a valid option. Try again!");
+    else {
+        fight();
+    }
 //if the player input an invalid answer that is not fight or skip into prompt. Then bring back the prompt "would you like to fight or skip battle" again
-    window.prompt("Would you like to fight or skip this battle?");
-}
+}   else {
+    window.alert("You need to choose a valid option. Try again!");
+    }
+};
+// run fight function to start game
+fight();
+
 
 // Setting up key word var with name "fight" and equal or execute code of Function
 
